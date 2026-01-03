@@ -2,17 +2,41 @@
 ---
 
 @import "{{ site.theme }}";
-section {
-width: auto;
+
+/* Override Minimal Theme Layout to remove sidebar and widen content */
+
+.wrapper {
+  max-width: 900px; /* Wider content area */
+  width: 90%;
+  margin: 0 auto;
 }
-footer {
-float: none;
-position: static;
-}
+
 header {
-float: none;
-position: static;
+  float: none;
+  position: static;
+  width: 100%;
+  margin-bottom: 20px;
 }
+
+section {
+  width: 100%;
+  float: none;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  float: none;
+  position: static;
+  clear: both;
+}
+
 img {
-max-width: 600px;
+  max-width: 100%; /* Ensure images don't overflow */
+}
+
+/* Ensure code blocks don't overflow */
+pre, code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
